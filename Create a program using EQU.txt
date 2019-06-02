@@ -1,0 +1,35 @@
+.model small
+.stack 100h
+.data 
+num1 equ '2'
+num3 equ '+'
+num4 equ '='
+num5 equ '4'
+.code
+
+start:
+
+mov ah, 02
+mov dl, num1
+int 21h
+
+mov ah, 02
+mov dl, num3
+int 21h
+
+mov ah, 02
+mov dl, num1
+int 21h
+
+mov ah, 02
+mov dl, num4
+int 21h
+
+mov ah, 02
+mov dl, num5
+int 21h
+
+
+mov ah,4ch
+int 21h
+end start

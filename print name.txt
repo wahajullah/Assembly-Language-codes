@@ -1,0 +1,29 @@
+.model small
+.stack 100h
+.data
+.code
+Start:
+mov ah,02
+mov dl,'W'
+int 21h
+
+mov ah,02
+mov dl,'a'
+int 21h
+
+mov ah,02
+mov dl,'h'
+
+int 21h
+mov ah,02
+mov dl,'a'
+
+int 21h
+mov ah,02
+mov dl,'j'
+int 21h
+
+
+mov ah,4ch
+int 21h
+End Start

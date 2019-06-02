@@ -1,0 +1,34 @@
+.model small
+.stack 100h
+.data
+mxg db"it is eqaual$"
+mxg1 db"it is not eqaual$"
+.code
+
+start:
+mov ax,@data
+mov ds, ax
+mov ah,09
+	
+mov al, 49
+mov bl,50
+
+cmp al, bl
+je equal
+	
+lea dx,mxg1
+int 21h 
+jmp display1
+
+equal:
+	lea dx,mxg
+	int 21h
+	jmp display1
+	
+display1:
+	mov ah,02
+	int 21h
+
+	mov ah,4ch
+	int 21h
+end start

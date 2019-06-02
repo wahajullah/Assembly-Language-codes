@@ -1,0 +1,47 @@
+.model small
+.stack 100h
+.data
+str1 db 'Name: Wahaj$' 
+str2 db 'Roll No: CSC-17F-094$'
+str3 db 'Class: 4A$'
+str4 db 'University: SMI University$'
+.code
+
+Start:
+mov ax,@data
+mov ds,ax
+
+lea dx,str1             
+mov ah,09
+int 21h
+
+;code for new line
+mov ah,02
+mov dl,10               
+int 21h
+
+lea dx,str2             
+mov ah,09
+int 21h
+
+;code for new line
+mov ah,02
+mov dl,10               
+int 21h
+
+lea dx,str3             
+mov ah,09
+int 21h
+
+;code for new line
+mov ah,02
+mov dl,10               
+int 21h
+
+lea dx,str4             
+mov ah,09
+int 21h
+
+mov ah,4ch
+int 21h
+End Start

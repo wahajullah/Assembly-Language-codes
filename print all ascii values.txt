@@ -1,0 +1,20 @@
+.model small
+.stack 100h
+.data
+.code
+
+start:
+
+mov cx, 256
+
+mov ah,02
+mov dl,0
+
+print:
+	int 21h
+	inc dl
+loop print
+
+mov ah,4ch
+int 21h
+end start
